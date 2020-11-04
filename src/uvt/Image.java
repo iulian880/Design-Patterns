@@ -1,12 +1,19 @@
 package uvt;
 
+import java.util.concurrent.TimeUnit;
 
-public class Image  implements Element{
-    String imageName;
-    public Image(String s){
-        imageName=s;
+public class Image {
+    String url;
+    Image(String u) {
+        url = u;
+        try {
+            TimeUnit.SECONDS.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
     public void print(){
-        System.out.println("Image with name: "+imageName);
+        System.out.println("Image with url: "+url);
     }
+
 }

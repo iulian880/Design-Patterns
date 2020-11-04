@@ -3,10 +3,19 @@ package uvt;
 
 public class Paragraph implements Element{
     String text;
-    public Paragraph(String s){
-        text=s;
+    AlignStrategy a;
+    public Paragraph(String s) {
+        text = s;
+    }
+    public void setAlignStrategy(AlignStrategy a){
+        this.a=a;
     }
     public void print(){
-        System.out.println("Paragraph: "+text);
+        if(a == null){
+            System.out.println(text);
+        }
+        else {
+            a.render(this, null);
+        }
     }
 }

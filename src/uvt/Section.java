@@ -4,25 +4,29 @@ package uvt;
 import java.util.Vector;
 
 public class Section implements Element{
-    String sectionTitle;
+    String title;
     Vector<Element> content = new Vector<>();
 
     public Section(String s){
-        sectionTitle=s;
+        title=s;
     }
-    public int add(Element elm){
+    public void add(Element elm){
         content.add(elm);
-        return content.size();
     }
     public void remove(Element elm){
         content.remove(elm);
     }
+
+    public void get(int i) {
+        content.get(i);
+    }
+
     public Element getElement(int index){
 
         return content.get(index);
     }
     public void print(){
-        System.out.println(this.sectionTitle);
+        System.out.println(this.title);
         for(Element i: content){
             i.print();
         }

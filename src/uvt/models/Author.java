@@ -1,4 +1,4 @@
-package uvt;
+package uvt.models;
 
 public class Author {
     String name;

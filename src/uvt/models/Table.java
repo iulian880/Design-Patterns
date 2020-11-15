@@ -1,7 +1,9 @@
-package uvt;
+package uvt.models;
 
 
-public class Table  implements Element{
+import uvt.models.Element;
+
+public class Table  implements Element {
     String title;
     public Table(String s){
         title=s;

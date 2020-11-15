@@ -1,9 +1,11 @@
-package uvt;
+package uvt.models;
 
+
+import uvt.models.Element;
 
 import java.util.Vector;
 
-public class Section implements Element{
+public class Section implements Element {
     String title;
     Vector<Element> content = new Vector<>();
 

@@ -1,4 +1,6 @@
-package uvt;
+package uvt.services;
+
+import uvt.models.Paragraph;
 
 import javax.naming.Context;
 

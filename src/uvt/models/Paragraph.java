@@ -1,8 +1,11 @@
-package uvt;
+package uvt.models;
 
 
-public class Paragraph implements Element{
-    String text;
+import uvt.models.Element;
+import uvt.services.AlignStrategy;
+
+public class Paragraph implements Element {
+    public String text;
     AlignStrategy a;
     public Paragraph(String s) {
         text = s;

@@ -1,4 +1,4 @@
-package uvt;
+package uvt.models;
 
 import java.util.concurrent.TimeUnit;
 

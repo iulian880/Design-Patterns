@@ -4,7 +4,7 @@ import java.util.Vector;
 
 public class Book{
     String title;
-    Vector<Element> content= new Vector<>();
+    Vector<Element> content=new Vector<Element>();
     private Vector<Author> authors = new Vector<>();
 
     public Book(String s) {

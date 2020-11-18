@@ -1,11 +1,14 @@
 package uvt.models;
 
+import services.ImageLoaderFactory;
+
 import java.util.concurrent.TimeUnit;
 
-public class Image {
+public class Image implements Element{
     String url;
-    Image(String u) {
+    public Image(String u) {
         url = u;
+        ImageLoaderFactory.create("JPG");
         try {
             TimeUnit.SECONDS.sleep(5);
         } catch (InterruptedException e) {
@@ -15,5 +18,10 @@ public class Image {
     public void print(){
         System.out.println("Image with url: "+url);
     }
+
+    public void accept(Visitor v) {
+        v.visit(this);
+    }
+
 
 }

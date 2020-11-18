@@ -1,10 +1,8 @@
 package uvt.models;
 
+import services.AlignStrategy;
 
-import uvt.models.Element;
-import uvt.services.AlignStrategy;
-
-public class Paragraph implements Element {
+public class Paragraph implements Element{
     public String text;
     AlignStrategy a;
     public Paragraph(String s) {
@@ -20,5 +18,8 @@ public class Paragraph implements Element {
         else {
             a.render(this, null);
         }
+    }
+    public void accept(Visitor v) {
+        v.visit(this);
     }
 }

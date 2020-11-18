@@ -1,9 +1,6 @@
 package uvt.models;
 
-import uvt.models.Element;
-import uvt.models.Image;
-
-public class ImageProxy implements Element {
+public class ImageProxy implements  Element{
     String url;
     Image realImage;
     public ImageProxy(String u) {
@@ -18,5 +15,8 @@ public class ImageProxy implements Element {
     public void print() {
         realImage=loadImage();
         realImage.print();
+    }
+    public void accept(Visitor v) {
+        v.visit(this);
     }
 }

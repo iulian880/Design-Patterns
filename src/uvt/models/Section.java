@@ -1,13 +1,10 @@
 package uvt.models;
 
-
-import uvt.models.Element;
-
 import java.util.Vector;
 
-public class Section implements Element {
+public class Section implements Element,Visitee{
     String title;
-    Vector<Element> content = new Vector<>();
+    Vector<Element> content = new Vector<Element>();
 
     public Section(String s){
         title=s;
@@ -32,5 +29,10 @@ public class Section implements Element {
         for(Element i: content){
             i.print();
         }
+    }
+    public void accept(Visitor v) {
+    v.visit(this);
+    for(Element elem:content)
+        elem.accept(v);
     }
 }

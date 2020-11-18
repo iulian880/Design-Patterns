@@ -1,14 +1,13 @@
 package uvt.models;
 
-
-import uvt.models.Element;
-
-public class Table  implements Element {
+public class Table  implements Element{
     String title;
-    public Table(String s){
-        title=s;
-    }
+    public Table(String s){ title=s; }
     public void print(){
-        System.out.println("Table with title: "+title);
+        System.out.println("models.Table with title: "+title);
+    }
+
+    public void accept(Visitor v) {
+        v.visit(this);
     }
 }

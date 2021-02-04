@@ -29,4 +29,8 @@ public class Book{
             i.print();
         }
     }
+    public void accept(Visitor v){
+        for(Element i: content)
+            i.accept(v);
+    }
 }

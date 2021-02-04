@@ -1,5 +1,6 @@
 package uvt.models;
 
+
 public class BookStatistics implements Visitor{
     int imageC=0;
     int tableC=0;

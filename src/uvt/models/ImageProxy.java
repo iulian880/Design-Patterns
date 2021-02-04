@@ -19,4 +19,9 @@ public class ImageProxy implements  Element{
     public void accept(Visitor v) {
         v.visit(this);
     }
+
+    @Override
+    public void setNewValue(String newValue) {
+
+    }
 }
